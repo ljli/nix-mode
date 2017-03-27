@@ -234,7 +234,7 @@
     (insert output)
     (goto-char (point-min))
     (let ((errs '()))
-      (while (search-forward-regexp err-msg-re nil t 1)
+      (while (search-forward-regexp nix-err-msg-re nil t 1)
         (let* ((file (match-string 2))
                (line (string-to-number (match-string 3)))
                (col (string-to-number (match-string 4)))
